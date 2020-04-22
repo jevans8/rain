@@ -15,7 +15,13 @@ $f3 = Base::instance();
 
 //Default route
 $f3->route('GET /', function(){
-    echo '<h1>Rain rain go away</h1>';
+    //echo '<h1>Rain rain go away</h1>';
+
+    //instantiate new template object
+    $view = new Template();
+
+    //display home page via render method
+    echo $view->render('views/home.html');
 });
 
 //Run F3
